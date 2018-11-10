@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Validasi</title>
+	</head>
+	<body>
+	<form name="arkademy">
+		<div id="alertuname"></div>
+		<input type="text" name="username" id="inputUsername" placeholder="Username.." onkeyup="validateUname()"/>
+		<input type="submit" id="btnSubmit" />
+
+	</form>
+	</body>
+	<script type="text/javascript">
+		var btnSubmit = document.getElementById("btnSubmit");
+		btnSubmit.disabled = true;
+		
+		function validateUname(){
+			var x=document.forms["arkademy"]["inputUsername"].value;
+			var alert=document.getElementById("alertuname");
+			
+				if (x.slice(0,5) == x.slice(0,5).toLowerCase()){
+					alert.innerHTML = "";
+					if (x.length >=6) {
+							if (x.length >=5 && (x.slice(5,6) == "_" || x.slice(5,6) == ".")) {
+								if (x.length >=8) {
+									if (x.slice(6,8) == x.slice(6,8).toUpperCase()) {
+										alert.innerHTML = "Format Benar";
+										btnSubmit.disabled = false;
+									}else{
+										alert.innerHTML = "2 huruf terakhir harus huruf kapital";
+										btnSubmit.disabled = true;
+									}
+								}
+								
+							}else{
+								alert.innerHTML = "Harus tanda Underscore atau Titik";
+								btnSubmit.disabled = true;
+							}
+					}
+				}else{
+					alert.innerHTML = "5 huruf pertama harus huruf kecil";
+					btnSubmit.disabled = true;
+				}
+			
+		}
+		
+	</script>
+</html>
