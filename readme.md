@@ -15,4 +15,4 @@ Repositori untuk keperluan seleksi Grand Bootcamp Arkademy, dengan keterangan :
   - File "query.sql" untuk inisiasi query sesuai pada soal.
   
 - Soal No. 7
-  dijawab dengan folder "7", dibuat dengan PHP (CodeIgniter), file "db_grandarka.sql" harus di Import terlebih dahulu.
+  dijawab dengan folder "7", dibuat dengan PHP (CodeIgniter), dapat dijalankan dengan webserver apache dan database mysql, file "db_grandarka.sql" harus di import terlebih dahulu.
